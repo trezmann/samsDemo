@@ -1,0 +1,23 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "datei",
+            "otherEntityName": "datei",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "verwendungszweck",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180313082050",
+    "entityTableName": "verwendungszwecke",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false
+}

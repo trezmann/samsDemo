@@ -1,0 +1,68 @@
+entity Datei {
+	MandantID Integer required,
+    KundeID	Integer required,
+    UserID Integer required,
+    ModulID Integer required,
+    SubsystemID Integer,
+    Dateipfad String required,
+    Dateiname String required ,
+    DateitypID Integer,
+    DateiformatID Integer required,
+    GueltigVon ZonedDateTime,
+    GueltigBis ZonedDateTime    
+}
+
+entity Metainfo {
+	Dateigroesse Integer required,
+    Hoehe Integer,
+    Breite Integer,
+    DPI Integer,
+    Erstellungsdatum ZonedDateTime,
+    Bitrate Integer
+}
+
+entity Kennzeichen {
+	Kennzeichen String
+}
+
+entity Schlagworte {
+	Schlagwort String
+}
+
+entity Verwendungszwecke {
+	Verwendungszweck String
+}
+
+entity Dateikategorien {
+	Dateikategorie String
+}
+
+entity RechteZuordnung {
+	MandantID Integer,
+    KundeID Integer,
+    UserID Integer,
+    ModulID Integer,
+    KundeGruppeID Integer,
+    BenutzergruppeID Integer,
+    IstRekursiv Boolean,
+    IstSubtraktiv Boolean
+}
+relationship OneToOne {
+	Datei{Metainfo} to Metainfo
+}
+
+relationship OneToMany {
+	Datei{Schlagwort} to Schlagworte,
+	Datei{Kennzeichen} to Kennzeichen,
+    Datei{Verwendungszweck} to Verwendungszwecke,
+    Datei{Dateikategorie} to Dateikategorien,
+    Datei{RechteZuord} to RechteZuordnung
+}
+
+// Set pagination options
+paginate all with pagination
+
+dto * with mapstruct
+
+service all with serviceImpl
+

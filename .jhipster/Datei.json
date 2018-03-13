@@ -1,0 +1,116 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "metainfo",
+            "otherEntityName": "metainfo",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "datei"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "schlagwort",
+            "otherEntityName": "schlagworte",
+            "otherEntityRelationshipName": "datei"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "kennzeichen",
+            "otherEntityName": "kennzeichen",
+            "otherEntityRelationshipName": "datei"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "verwendungszweck",
+            "otherEntityName": "verwendungszwecke",
+            "otherEntityRelationshipName": "datei"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "dateikategorie",
+            "otherEntityName": "dateikategorien",
+            "otherEntityRelationshipName": "datei"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "rechteZuord",
+            "otherEntityName": "rechteZuordnung",
+            "otherEntityRelationshipName": "datei"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "mandantID",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "kundeID",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "userID",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "modulID",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "subsystemID",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "dateipfad",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "dateiname",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "dateitypID",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "dateiformatID",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "gueltigVon",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "gueltigBis",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "changelogDate": "20180313082046",
+    "entityTableName": "datei",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false
+}

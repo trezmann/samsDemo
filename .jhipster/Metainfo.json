@@ -1,0 +1,39 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "dateigroesse",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "hoehe",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "breite",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "dPI",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "erstellungsdatum",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "bitrate",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20180313082047",
+    "entityTableName": "metainfo",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false
+}
