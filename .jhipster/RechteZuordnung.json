@@ -1,0 +1,51 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "datei",
+            "otherEntityName": "datei",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "mandantID",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "kundeID",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "userID",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "modulID",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "kundeGruppeID",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "benutzergruppeID",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "istRekursiv",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "istSubtraktiv",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20180313082052",
+    "entityTableName": "rechte_zuordnung",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false
+}
